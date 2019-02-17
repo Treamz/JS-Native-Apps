@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #e96443;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #904e95, #e96443); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e96443;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #904e95, #e96443); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+body {
+    background: #e96443;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #904e95, #e96443); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 10px;
+}
+
+
+#app {
+    margin: 20px;
+    width: 800px;
+    margin: 0 auto;
+    background-color: #444;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 12px #222;
+    
+   
+}
+ul {
+    max-height: 500px;
+    overflow: auto;
+}
+
+ul > li {
+    border: 2px solid #eeeeee;
+    list-style-type: none;
+    padding: 20px;
+    overflow: auto;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+ul > li:hover {
+    border: 2px solid #eeeeee;
+    list-style-type: none;
+    padding: 20px;
+    overflow: auto;
+    background-color: #e2e2e2;
+}
+
+.flexContainer {
+    display: flex;
+}
+
+#inputField {
+    flex: 1;
+    padding: 20px 5px;
+}
+
+#addBtn {
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    background: #136a8a;  /* fallback for old browsers */
+    background-size: 200%;
+background: -webkit-linear-gradient(to right, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.del, .edit {
+    margin: 0 10px;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    float: right;
+    background-color: #fff;
+    color: #999;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0 0 2px #000;
+    border: 1px solid #222;
+    border-radius: 50%;
+}
+
+.complete {
+    text-decoration: line-through;
+    background-color: rgba(255, 255, 255, .6);
+}
+
+.noshow {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .4s ease;
+}
+
+.btns {
+    display: inline-flex;
+    float: right;
+}

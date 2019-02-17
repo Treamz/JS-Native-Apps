@@ -1,0 +1,85 @@
+body {
+    background: #222;
+    font-family: Arial, san-serif;
+}
+
+.container {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.container > button {
+    background-color: rgba(192, 3, 3, 0.719);
+    border: 2px solid rgba(192, 3, 3, 0.719);
+    display: block;
+    width: 100%;
+    padding: 20px;
+}
+.table {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block {
+    cursor: pointer;
+    background-color: #747474;
+    border: 2px solid #222;
+    height: 140px;
+    flex: 1 0 30%;
+    transition: all .4s ease-in-out;
+}
+
+.block:hover {
+    box-shadow: 0 0 2px #222;
+    background-color: rgb(90, 90, 90);
+
+}
+
+.block.zero,.block.xxxx {
+    
+    position: relative;
+}
+.block.xxxx:before {
+    content: 'X';
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #ff7b00;
+}
+
+.block.zero:before {
+    content: 'O';
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(0, 162, 255);
+}
+
+.msg {
+    font-size: 46px;
+    color: rgb(255, 102, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: fixed;
+    background: rgba(255, 255, 255,.9);
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .container {
+        width: 100%;
+    }
+    
+  }
