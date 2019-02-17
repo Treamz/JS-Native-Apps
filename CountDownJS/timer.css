@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    background: #009FFF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    margin: 10px;
+    color: #fff;
+}
+/* Timer */
+#countdown {
+    display: inline-flex;
+    position: relative;
+}
+#countdown > div {
+    font-family: Arial, san-serif;
+    font-size: 46px;
+    color:#fff;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 5px;
+    background-color: #222;
+}
+#countdown > .cdays > .days {
+    
+}
