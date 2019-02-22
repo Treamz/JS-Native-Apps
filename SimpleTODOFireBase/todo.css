@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00b09b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.todos {
+    max-width: 700px;
+    min-width: 700px;
+    min-height: 500px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .6);
+    background: #fff;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all .4s ease-in-out;
+}
+
+.todo__list {
+    max-height: 700px;
+    padding: 10px 20px 20px 20px;
+    position: relative;
+    overflow: auto;
+    transition: all .4s ease-in-out;
+    overflow-x: hidden;
+}
+
+.todos .todo {
+    background: #fff;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .6);
+    transition: all 1s ease-in-out;
+}
+
+.todos .todo.removed {
+    transform: scale(2);
+    opacity: 0;
+}
+
+.todos .todo:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .6);
+}
+.todos .todo > .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todos .todo > .btns > button {
+    margin: 0 5px;
+    height: 30px;
+    z-index: 100;
+    width: 30px;
+    cursor: pointer;
+}
+
+.newtodo {
+    width: calc(100% - 40px);
+    display: flex;
+    margin: 20px 20px 0 20px;
+}
+.todoinput {
+    padding: 10px 20px;
+    flex: 1;
+    border: 2px solid #222;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+button.add {
+    border: 2px solid #222;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #fff;
+    transition: all .4s ease-in-out;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+button.edit, button.delete {
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
+}
+
+button.edit:hover, button.delete:hover {
+    color: #fff;
+    background: #222;
+    box-shadow: 0 0 20px #222;
+}
+
+button.add:hover {
+    background: #000;
+    color: #fff;
+
+}
+
+.todos .todo.complete {
+    position: relative;
+    opacity: .5;
+
+}
+.complete:after {
+
+}
+#editModal {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: all .4s ease-in-out;
+}
+#editModal.open {
+    transform: scale(1);
+}
+#editModal .close {
+    position: fixed;
+}
+#editModal .container{
+    box-shadow: 0 0 5px #222;
+    padding: 20px;
+    width: 700px;
+    background-color: #fff;
+}
+#editModal h2 {
+    text-transform: uppercase;
+    color: #c4c4c4;
+}
+#editModal  textarea {
+    width: 100%;
+}
+
+#editModal .container > button {
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    background: #222;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    transition: all .4s ease-in-out;
+}
+#editModal button:hover {
+    animation: editBtn 2s infinite;
+    padding: 10px 30px;
+    color: #222;
+    background: #fff;
+    border: 2px solid #222;
+}
+
+#editModal .title {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+#editModal .title button {
+    cursor: pointer;
+    display: block;
+    background: #222;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    transition: all .4s ease-in-out;
+}
+
+@keyframes editBtn {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(5deg)
+        scale(1.2);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}

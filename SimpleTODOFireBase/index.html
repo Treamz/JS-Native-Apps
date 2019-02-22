@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="todo.min.css">
+</head>
+<body>
+
+    <div class="container todos">
+        <div class="newtodo">
+          <input type="text" class="todoinput">
+          <button class="add">ADD</button>
+        </div>
+        <div class="todo__list">
+
+        </div>
+    </div>
+
+    <div id="editModal">
+      <div class="container">
+        <div class="title">
+          <h2>Edit Todo</h2>
+          <button id="closeModal">X</button>
+        </div>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button>Save</button>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC3tWHsblHlAbyTYeqgZuPsDZa4tQUGg-Y",
+        authDomain: "todos-firebase-c072a.firebaseapp.com",
+        databaseURL: "https://todos-firebase-c072a.firebaseio.com",
+        projectId: "todos-firebase-c072a",
+        storageBucket: "todos-firebase-c072a.appspot.com",
+        messagingSenderId: "745242060431"
+      };
+      firebase.initializeApp(config);
+    </script>
+        <script src="firebasetodo.js"></script>
+</body>
+</html>
