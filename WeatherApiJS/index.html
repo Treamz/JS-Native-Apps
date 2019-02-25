@@ -5,10 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="weather.css">
 </head>
 <body>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+        <div id="app">
+           <div class="app__left">
+                <div class="cityName">London</div>
+                <div class="app__bottom">
+                    <div class="bottom__left">
+                            <div class="time">23:49</div>
+                            <div class="date">23 Thurdsay</div>
+                    </div>
+                    <div class="bottom__right">20C</div>
+                </div>
+           </div>
+           <div class="app__right">
+               <div class="skyTop"><img src="#" class="weather_icon" alt=""></div>
+               <div class="skyBottom"></div>
+               <div class="wind"></div>
+               <div class="sunrise"></div>
+               <div class="sunset"></div>
+           </div>
+           
+        </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="weather.js"></script>
 </body>
 </html>
