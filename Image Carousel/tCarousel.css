@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tCarousel {
+
+    
+}
+#tCarousel .slides {
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+    perspective: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+#tCarousel img {
+    width: 0;
+    height: 300px;
+    object-fit: cover;
+    transition: all .4s ease-in-out;
+}
+#tCarousel .tItem.active img {
+    width: 800px;
+}
+#tCarousel .tItem.out img {
+    width: 0;
+}
+
+.controls {
+    position: absolute;
+}
