@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lighbox Example</title>
+    <link rel="stylesheet" href="lightboxJS.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+           
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .container a {
+            flex: 1 0 21%; /* explanation below */
+        }
+        .container a img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        @media only screen and (max-width: 600px) {
+            .container a {
+            flex: 1 0 100%; /* explanation below */
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container gallery">
+        <a href="#"><img src="images/img_1.jpg" data-lighbox="images/img_1.jpg" alt="Example image"></a>
+        <a href="#"><img src="images/img_2.jpg" data-lighbox="images/img_2.jpg" alt="Example image"></a>
+        <a href="#"><img src="images/img_3.jpg" data-lighbox="images/img_3.jpg" alt="Example image"></a>
+    </div>
+    <div class="container gallery2">
+        <a href="#"><img src="images/img_1.jpg" data-lighbox="images/img_1.jpg" alt="Example image"></a>
+        <a href="#"><img src="images/img_2.jpg" data-lighbox="images/img_2.jpg" alt="Example image"></a>
+        <a href="#"><img src="images/img_3.jpg" data-lighbox="images/img_3.jpg" alt="Example image"></a>
+    </div>
+    <script src="lightboxJS.js"></script>
+</body>
+</html>

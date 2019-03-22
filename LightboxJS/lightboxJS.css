@@ -1,0 +1,74 @@
+.modalWrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba();
+    background: #77A1D3;
+    background: -webkit-linear-gradient(to right, rgba(230, 132, 174,.9), rgba(121, 203, 202,.9), rgba(119, 161, 211,.9));
+    background: linear-gradient(to right, rgba(230, 132, 174,.9), rgba(121, 203, 202,.9), rgba(119, 161, 211,.9));
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease-in-out;
+}
+
+
+.modalWrapper.open {
+    opacity: 1;
+}
+
+.modal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.modal > img {
+    object-fit: contain;
+    width: 100%;
+    padding: 10px;
+}
+
+.closeModal {
+    cursor: pointer;
+    width: 2.5rem;
+    position: absolute;
+    height: 2.5rem;
+    top: -4rem;
+    display: block;
+}
+
+.closeModal > span {
+    
+    margin-top: .6rem;
+    width: 2.5rem;
+    height: .3rem;
+    background: #fff;
+    display: block;
+    transition: all .4s ease-in-out;
+}
+.closeModal > span:before {
+    content: '';
+    width: 2.5rem;
+    height: .3rem;
+    background: #fff;
+    display: block;
+    transform: translate(0,1rem);
+    transition: all .4s ease-in-out;
+    
+}
+.closeModal:hover > span {
+    transform: translate(0,.5rem) rotate(215deg);
+}
+.closeModal:hover > span:before {
+    transform: rotate(110deg);
+}
+
+.modalWrapper.open.close {
+    opacity: 0;
+}
+
